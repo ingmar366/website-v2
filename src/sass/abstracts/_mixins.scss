@@ -1,0 +1,62 @@
+@mixin before-after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin card-layout {
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: 3fr 2fr;
+  background-color: $color-primary;
+  margin: 3.2rem 8rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  // max-height: 25rem;
+
+  &-textcontent {
+    margin: 5px 1px 0 1px;
+    padding-bottom: 10px;
+    overflow-y: auto;
+    max-height: 24rem;
+    &::-webkit-scrollbar {
+      width: 1rem;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: $color-primary;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #333;
+      border-radius: 100rem;
+    }
+  }
+  &-text,
+  & h4 {
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: 2.4rem;
+    margin-right: 2.4rem;
+  }
+
+  & h4 {
+    justify-self: center;
+  }
+}
+
+@mixin header-style {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.1;
+  letter-spacing: -1;
+}
+
+@mixin arrow-icon {
+  position: absolute;
+  width: 6%;
+  filter: invert(99%) sepia(38%) saturate(368%) hue-rotate(64deg)
+    brightness(95%) contrast(94%);
+  top: 50%;
+  transform: translateY(-20%);
+  z-index: 100;
+}

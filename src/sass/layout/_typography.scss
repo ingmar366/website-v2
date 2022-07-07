@@ -1,0 +1,116 @@
+// SPACING SYSTEM (px)
+// 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+// FONT SIZE SYSTEM (px)
+// 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+// */
+///////////////////////////////////////////////////////////////////
+//general
+body {
+  font-size: 1.8rem;
+}
+
+.header3 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  @include header-style;
+}
+
+///////////////////////////////////////////////////////////////////
+//header
+
+.header {
+  &__primary {
+    color: aliceblue;
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: 400;
+  }
+
+  &__text {
+    @include header-style;
+    color: aliceblue;
+    font-size: 7.4rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+///////////////////////////////////////////////////////////////////
+//NAV
+
+.nav {
+  &__list {
+    list-style: none;
+  }
+  &__link {
+    color: aliceblue;
+    &:link,
+    &:active {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 2rem;
+    }
+  }
+}
+
+///////////////////////////////////////////////////////////////////
+//about me
+
+.about {
+  font-size: 1.8rem;
+  line-height: 1.5;
+
+  &__bt {
+  }
+}
+
+///////////////////////////////////////////////////////////////////
+//project
+
+.projects {
+  color: $color-secondary;
+  &__header {
+    text-align: center;
+    color: $color-primary;
+    @include header-style;
+  }
+
+  &__card-1 {
+    &-text {
+    }
+  }
+}
+
+///////////////////////////////////////////////////////////////////
+//contact
+
+.contact {
+  color: $color-primary;
+  font-size: 3rem;
+
+  &__info-header {
+    font-size: 3rem;
+  }
+
+  &__files-list a:active,
+  &__files-list a:link {
+    position: relative;
+    text-decoration: none;
+    line-height: 1.1;
+    color: $color-primary;
+    font-size: 2rem;
+  }
+
+  &__files-cv:after,
+  &__files-udemy:after,
+  &__files-pt:after {
+    content: "";
+    position: absolute;
+    background-color: $color-primary;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: 5%;
+  }
+}

@@ -1,0 +1,14 @@
+@keyframes start-screen {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animate {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

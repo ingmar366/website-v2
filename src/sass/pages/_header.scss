@@ -1,0 +1,42 @@
+.header {
+  width: 100vw;
+  height: 97vh;
+  position: relative;
+  overflow: hidden;
+  background-image: -webkit-linear-gradient(
+      267.4deg,
+      rgba($color-dark, 0.5) 0%,
+      rgba(0, 0, 0, 0) 20%,
+      rgba(0, 0, 0, 0) 80%,
+      rgba($color-dark, 0.1) 82%,
+      rgba($color-dark, 0.5) 95%,
+
+      rgba($color-dark, 0.7) 100%
+    ),
+    url(../img/IMG_4440.jpg);
+  background-size: 100%;
+
+  &::before {
+    @include before-after;
+    background-color: $color-dark;
+    z-index: 5;
+    animation: start-screen 3s ease-in forwards;
+  }
+  &__img {
+    width: 100%;
+  }
+
+  &__primary {
+    z-index: 1;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+  }
+
+  &__text {
+    position: absolute;
+    z-index: 1;
+    top: 30%;
+    left: 10rem;
+  }
+}

@@ -1,0 +1,97 @@
+.about {
+  padding: 9.6rem 0;
+  width: 80%;
+  max-width: 120rem;
+  margin: 0 auto;
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 6.4rem;
+  column-gap: 2.4rem;
+  border-bottom-right-radius: 10rem;
+
+  &__header {
+    grid-row: 1;
+    grid-column: 1/-1;
+    justify-self: center;
+  }
+
+  &__bt {
+    grid-row: 2;
+    grid-column: 1/-2;
+    padding: 0 $padding-text-me 0 $padding-text-me;
+    transition: $transition-time;
+  }
+
+  &__img-me {
+    justify-self: center;
+    align-self: center;
+    transform: scale(1.4);
+    width: 75%;
+    grid-row: 2;
+    grid-column: 3;
+  }
+
+  &__programming {
+    grid-column: 2/-1;
+    padding: 0 $padding-text-me;
+    transition: $transition-time;
+  }
+
+  &__hobbies {
+    grid-column: 1/-2;
+    padding: 0 $padding-text-me;
+    transition: $transition-time;
+  }
+}
+
+.hat {
+  grid-column: 1;
+  grid-row: 2;
+  align-self: center;
+  transform: translate(-7rem, -10%);
+  width: $svg-width;
+  stroke-dasharray: 180;
+  stroke-dashoffset: 180;
+}
+
+.car,
+.notebook {
+  grid-column: 1;
+  grid-row: 3;
+  justify-self: end;
+  width: $svg-width;
+}
+.car {
+  transform: translateY(90%);
+  align-self: start;
+  stroke-dasharray: 6350;
+  stroke-dashoffset: 6350;
+}
+
+.notebook {
+  transform: translateY(-80%);
+  stroke-dasharray: 410;
+  stroke-dashoffset: 410;
+  align-self: end;
+}
+
+.board-bike {
+  grid-column: 3;
+  grid-row: 4;
+  align-self: center;
+  padding-top: 6rem;
+  width: $svg-width;
+  stroke-dasharray: 280;
+  stroke-dashoffset: 280;
+}
+
+.animation {
+  animation: animate 2s linear;
+  animation-fill-mode: forwards;
+}
+
+.animation-car {
+  animation: animate 3.5s linear;
+  animation-fill-mode: forwards;
+}
